@@ -1,5 +1,5 @@
 //
-//  ContactCellController.swift
+//  DetailController.swift
 //  contactManager
 //
 //  Created by Rohit kumar basnet on 31/01/2019.
@@ -8,7 +8,10 @@
 
 import Foundation
 import UIKit
-class  ContactCellController: UITableViewCell {
-    @IBOutlet weak var contact_name: UILabel!
+class DetailController: ViewController  {
+    override func viewDidLoad() {
+        
+        
+    }
     
 }

@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate ,UITableViewDataSource{
     
+    @IBOutlet weak var tableView: UITableView!
     var contactsArray : [MyContact] = []
     
-    
+     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return contactsArray.count
         return 20
@@ -20,17 +24,25 @@ class ViewController: UIViewController,UITableViewDelegate ,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let tableCell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath) as! ContactViewController
-//        tableCell.name = "Ram Bahadur"
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath) as! ContactCellController
+        tableCell.contact_name?.text = "Ram Bahadur"
         return tableCell
     }
     
-
-    @IBOutlet weak var tableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    //nvaigation to detail page
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //row selection
+        performSegue(withIdentifier: "detail_page", sender: self)
     }
+    
+    //function for defining seuge- navigating to new view , Detail view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier=="detail_page"{
+            let detailViewController=segue.destination as? DetailController
+            
+        }
+    }
+ 
 
 
 }

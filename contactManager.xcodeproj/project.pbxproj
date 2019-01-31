@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840D731B2203B0FB00716D1E /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D731A2203B0FB00716D1E /* DetailController.swift */; };
 		842F43072202596600DE3266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F43062202596600DE3266 /* AppDelegate.swift */; };
 		842F43092202596600DE3266 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F43082202596600DE3266 /* ViewController.swift */; };
 		842F430C2202596600DE3266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842F430A2202596600DE3266 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840D731A2203B0FB00716D1E /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		842F43032202596600DE3266 /* contactManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842F43062202596600DE3266 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842F43082202596600DE3266 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				842F43122202596700DE3266 /* Info.plist */,
 				842F431A220262FB00DE3266 /* MyContact.swift */,
 				842F431E2202672300DE3266 /* ContactCellController.swift */,
+				840D731A2203B0FB00716D1E /* DetailController.swift */,
 			);
 			path = contactManager;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				842F43092202596600DE3266 /* ViewController.swift in Sources */,
 				842F43072202596600DE3266 /* AppDelegate.swift in Sources */,
 				842F431F2202672300DE3266 /* ContactCellController.swift in Sources */,
+				840D731B2203B0FB00716D1E /* DetailController.swift in Sources */,
 				842F431B220262FB00DE3266 /* MyContact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
