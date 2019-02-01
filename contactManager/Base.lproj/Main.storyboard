@@ -111,8 +111,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WL-Ar-nf5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.59215686274509804" green="0.94901960784313721" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tt4-Ex-rMR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="296"/>
+                                <color key="backgroundColor" red="0.59215686274509804" green="0.94901960784313721" blue="0.92941176470588238" alpha="0.096505779109589046" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="mDP-fq-sRI"/>
                                 </constraints>
@@ -230,17 +235,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iiV-Nq-u7c" firstAttribute="trailing" secondItem="1WL-Ar-nf5" secondAttribute="trailing" id="60j-3f-fSJ"/>
                             <constraint firstItem="Tt4-Ex-rMR" firstAttribute="trailing" secondItem="iiV-Nq-u7c" secondAttribute="trailing" id="JWy-Kp-mHw"/>
+                            <constraint firstItem="iiV-Nq-u7c" firstAttribute="bottom" secondItem="1WL-Ar-nf5" secondAttribute="bottom" id="S3Z-MP-xqA"/>
+                            <constraint firstItem="1WL-Ar-nf5" firstAttribute="top" secondItem="iiV-Nq-u7c" secondAttribute="top" id="VDe-BP-HHM"/>
                             <constraint firstItem="Tt4-Ex-rMR" firstAttribute="top" secondItem="iiV-Nq-u7c" secondAttribute="top" id="uqg-i1-mui"/>
                             <constraint firstItem="Tt4-Ex-rMR" firstAttribute="leading" secondItem="iiV-Nq-u7c" secondAttribute="leading" id="w4F-yX-zwm"/>
+                            <constraint firstItem="1WL-Ar-nf5" firstAttribute="leading" secondItem="iiV-Nq-u7c" secondAttribute="leading" id="x3r-Rz-Ch1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iiV-Nq-u7c"/>
                     </view>
                     <connections>
                         <outlet property="cityName" destination="LPs-cE-OJz" id="pIS-ry-Och"/>
                         <outlet property="contactTitle" destination="lrk-0j-Nhy" id="aLi-xo-OZD"/>
+                        <outlet property="detail_background" destination="1WL-Ar-nf5" id="uDE-De-sVf"/>
                         <outlet property="email" destination="KQK-hX-dEC" id="H9M-uX-F5I"/>
                         <outlet property="firstName" destination="e7r-cf-M1e" id="TJx-sT-7l3"/>
                         <outlet property="largeProfile" destination="Tt4-Ex-rMR" id="CQX-kr-48m"/>

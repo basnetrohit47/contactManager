@@ -37,6 +37,15 @@ class ViewController: UIViewController,UITableViewDelegate ,UITableViewDataSourc
        
         tableCell.image_Src.image = UIImage(data: data! as Data)
         
+        if (indexPath.row % 2 == 0){
+            tableCell.backgroundColor = UIColor(displayP3Red: 151/255, green: 242/255, blue: 133/255, alpha: 0.1)
+
+        }
+        else{
+            tableCell.backgroundColor = UIColor(displayP3Red: 151/255, green: 242/255, blue: 133/255, alpha: 0.4)
+
+        }
+        
         
         
         return tableCell
