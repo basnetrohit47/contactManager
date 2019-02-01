@@ -10,5 +10,13 @@ import Foundation
 import UIKit
 class  ContactCellController: UITableViewCell {
     @IBOutlet weak var contact_name: UILabel!
+    @IBOutlet weak var image_Src: UIImageView!
+    @IBOutlet weak var email_Id: UILabel!
+    
+    override func awakeFromNib() {
+        image_Src.layer.cornerRadius = image_Src.frame.size.width/2
+        image_Src.clipsToBounds = true
+    }
+    
     
 }

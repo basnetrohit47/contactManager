@@ -11,11 +11,32 @@ import UIKit
 class DetailController: ViewController  {
      var objContact : MyContact?
     
-    @IBOutlet weak var test: UILabel!
+    @IBOutlet weak var contactTitle: UILabel!
     @IBOutlet weak var firstName: UILabel!
+    @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var cityName: UILabel!
+    @IBOutlet weak var street: UILabel!
+    @IBOutlet weak var mobileNumber: UILabel!
+    @IBOutlet weak var phoneNumber: UILabel!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var largeProfile: UIImageView!
     override func viewDidLoad() {
-        print(objContact?.firstName)
-        test.text = objContact?.firstName
+        
+        contactTitle.text = objContact?.contactTitle
+        firstName.text = objContact?.firstName
+        lastName.text = objContact?.lastName
+        cityName.text = objContact?.cityName
+        street.text =  objContact?.streetName
+        mobileNumber.text = objContact?.mobile_No
+        phoneNumber.text = objContact?.cell_NO
+        email.text=objContact?.email_Id
+ 
+        let url = NSURL(string: (objContact?.largeSizePhoto)!)
+        let data = NSData(contentsOf: url! as URL)
+        
+        largeProfile.image = UIImage(data: data! as Data)
+        
+        
         
     }
     

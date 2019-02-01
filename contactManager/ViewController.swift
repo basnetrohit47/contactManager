@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  contactManager
 //
-//  Created by Rohit kumar basnet on 30/01/2019.
+//  Created by Rohit kumar basnet on 29/01/2019.
 //  Copyright © 2019 Rohit kumar basnet. All rights reserved.
 //
 
@@ -29,7 +29,16 @@ class ViewController: UIViewController,UITableViewDelegate ,UITableViewDataSourc
         
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath) as! ContactCellController
         var myCnt=contactsArray[indexPath.row]
-        tableCell.contact_name?.text = myCnt.cityName
+       
+        tableCell.contact_name?.text = myCnt.firstName+" " + myCnt.lastName
+        tableCell.email_Id?.text = myCnt.email_Id
+        let url = NSURL(string: myCnt.profilePhoto)
+        let data = NSData(contentsOf: url! as URL)
+       
+        tableCell.image_Src.image = UIImage(data: data! as Data)
+        
+        
+        
         return tableCell
     }
     
@@ -76,19 +85,6 @@ class ViewController: UIViewController,UITableViewDelegate ,UITableViewDataSourc
     var email_Id : String!
     var profilePhoto : String!
     var largeSizePhoto : String!
-        
-//        var contactTitle : String
-//        var firstName : String
-//        var lastName : String
-//
-//        var streetName : String
-//        var cityName : String
-//        var email_Id : String
-//        var mobile_No : String
-//        var cell_NO : String
-//        var profilePhoto : String
-//        var largeSizePhoto : String
-//
         
         
         
