@@ -72,7 +72,7 @@ class ViewController: UIViewController,UITableViewDelegate ,UITableViewDataSourc
     
     
     func getContactsFromAPI(){
-    let url = URL(string:"https://randomuser.me/api/?results=50")
+    let url = URL(string:"https://randomuser.me/api/?results=50&&seed=rohit")
     let task = URLSession.shared.dataTask(with: url!) {
     (data,response,error) in
     guard let jsonResponse = (try?  JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String:Any] else {
