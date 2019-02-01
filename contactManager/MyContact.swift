@@ -5,7 +5,7 @@
 //  Created by Rohit kumar basnet on 30/01/2019.
 //  Copyright © 2019 Rohit kumar basnet. All rights reserved.
 //
-
+// contact data modal
 import Foundation
 class MyContact{
     var contactTitle : String
